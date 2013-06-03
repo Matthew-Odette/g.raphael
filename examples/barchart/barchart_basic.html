@@ -7,14 +7,23 @@
         <script type="text/javascript">
             window.onload = function() {
                 // Creates canvas 640 × 480 at 10, 50
-                var r = Raphael(10, 50, 640, 480);
+                var r = Raphael("barchart", "640px", "480px");
 
                 // Creates a single series barchart at 10, 10
                 // width 300, height 220, data: [55, 20, 13, 32, 5, 1, 2, 10]
-                r.barchart(10, 10, 300, 220, [[55, 20, 13, 32, 5, 1, 2, 10]]);
+                //r.barchart(10, 10, 300, 220, [[55, 20, 13, 32, 5, 1, 2, 10]]);
+
+
+                //        ( a,  b,   c    d,               e,                   f)
+                r.barchart(40, 10, 400, 220, [[55, 20, 13, 32, 5, 1, 2, 10]], {colors:["#00901e"]});
+                //  a. x-position of the chart on the canvas
+                //  b. y-position of the chart on the canvas
+                //  c. width of the chart
+                //  d. height of the chart
             }
         </script>
     </head>
     <body>
+        <div id="barchart"></div>
     </body>
 </html>
