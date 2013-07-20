@@ -2,8 +2,8 @@
     <head>
         <title>gRaphaël Bar Chart - a stacked vs unstacked barchart example</title>
         <script type="text/javascript" src="../raphael-min.js"></script>
-        <script type="text/javascript" src="../../g.raphael-min.js"></script>
-        <script type="text/javascript" src="../../g.bar-min.js"></script>
+        <script type="text/javascript" src="../../g.raphael.js"></script>
+        <script type="text/javascript" src="../../g.bar.js"></script>
         <script type="text/javascript">
             window.onload = function() {
                 // Creates canvas 480 x 640 at 10, 50
@@ -15,11 +15,11 @@
                 
                 // Creates a stacked barchart at 10, 10
                 // width 300, height 220, data sets: data1, data2, data3
-                r.g.barchart(10, 10, 300, 220, [data1, data2, data3], {stacked:true});
+                r.barchart(10, 10, 300, 220, [data1, data2, data3], {stacked:true});
                 
                 // Creates a barchart at 10, 320
                 // width 300, height 220, data sets: data1, data2, data3
-                r.g.barchart(10, 320, 300, 220, [data1, data2, data3]);
+                r.barchart(10, 320, 300, 220, [data1, data2, data3]);
             }
         </script>
     </head>

@@ -20,7 +20,10 @@
             total = 0,
             others = 0,
             cut = 9,
-            defcut = true;
+            defcut = true,
+            donut         = opts.donut         || false,
+            donutDiameter = opts.donutDiameter || 0.6666666, // percentage of the pie charts width width
+            donutFill     = opts.donutFill     || "#FFFFFF"; // the color of the donut 'hole'
 
         function sector(cx, cy, r, startAngle, endAngle, fill) {
             var rad = Math.PI / 180,
@@ -107,6 +110,12 @@
                 covers.push(p);
                 series.push(p);
             }
+        }
+
+        // donut chart code
+        if (donut) {
+            var donutRadius = r * donutDiameter;
+            series.push(paper.circle(cx, cy, donutRadius).attr({ fill: donutFill, stroke: opts.stroke || "#fff"}));
         }
 
         chart.hover = function (fin, fout) {
