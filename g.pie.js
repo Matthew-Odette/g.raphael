@@ -115,7 +115,7 @@
         // donut chart code
         if (donut) {
             var donutRadius = r * donutDiameter;
-            series.push(paper.circle(cx, cy, donutRadius).attr({ fill: donutFill, stroke: opts.stroke || "#fff"}));
+            series.push(paper.circle(cx, cy, donutRadius).attr({ fill: donutFill, stroke: opts.stroke || donutFill}));
         }
 
         chart.hover = function (fin, fout) {
